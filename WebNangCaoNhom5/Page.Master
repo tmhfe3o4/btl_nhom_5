@@ -1,5 +1,4 @@
-﻿<%-- đã hiểu hết --%>
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="WebNangCaoNhom5.Page" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="WebNangCaoNhom5.Page" %>
 <%@ Register TagPrefix="UC" TagName="Cart" Src="~/UserControl/Cart.ascx" %>
 <!DOCTYPE html>
 
@@ -7,26 +6,30 @@
 
 <head>
     <title></title>
-    <%-- css --%>
-    <link href="Asset/Client/css/Style.css" rel="stylesheet" />
-    <%-- javascript --%>
     <script src="Asset/Client/js/jquerry.js"></script>
+    <link href="Asset/Client/css/Style.css" rel="stylesheet" />
+    <link href="Asset/Client/fontawesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="Asset/Client/fontawesome/css/font-awesome.css" rel="stylesheet" />
     <script src="Scripts/jquery.unobtrusive-ajax.js"></script>
-    <%-- font awesome icon --%>
-    <link href="Asset/Client/fontawesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="Asset/Client/fontawesome/css/font-awesome.css" rel="stylesheet" />
+
 </head>
+
+
+
+
 <body>
-    <%-- header --%>
+
     <div class="header">
         <div class="header_top">
             <div class="logo">
                 <a href="/Home">
                     <img src="Asset/Client/image/logoWeb.png" alt="">
                 </a>
+
             </div>
             <div id="load" class="cart">
-                <UC:Cart runat="server" />
+              <UC:Cart runat="server"  />
+
             </div>
         </div>
         <div class="header_bottom">
@@ -106,6 +109,7 @@
                     </li>
                     <li>
                         <div class="Search">
+
                             <input id="keyword" type="text" placeholder="Type...">
                             <input id="Search" type="submit" value="Search" />
                             <script>
@@ -120,8 +124,10 @@
                                     });
                                 });
                             </script>
+
                         </div>
                     </li>
+
                 </ul>
                 <script>
                     $(document).ready(function () {

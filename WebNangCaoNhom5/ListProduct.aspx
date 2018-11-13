@@ -1,41 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page.Master" AutoEventWireup="true" CodeBehind="ListProduct.aspx.cs" Inherits="WebNangCaoNhom5.ListProduct" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
-    <script>
-        $(function () {
-            $(".list_categorys .content a").click(function () {
 
-                $.ajax({
-
-                    type: "post",
-                    contentType: 'application/json; charset=utf-8',
-                    dataType: 'json',
-                    data: '{tensp:' + $(this).attr("data-info") + ',soluong:""}',
-                    url: "Index.aspx/LoadUserControl",
-                    success: function (data) {
-                       $("#load").load(location.href + " #load");
-
-                        $(".alert").addClass("activealert");
-                        $(".alert").text("Đặt thành công!");
-                        $(".alert").css("background", "#b2cea7")
-
-                        setTimeout(function () {
-                            $(".alert").removeClass("activealert");
-                        }, 3000);
-                    },
-                    error: function (msg) {
-                        alert("no");
-                    }
-                });
-
-            });
-        });
-    </script>
     <div class="content">
         <div class="news_products">
             <div class="head_categorys">
-                <span><%=Page.RouteData.Values["producer"].ToString()%></span>
-                
+                <span><%=Page.RouteData.Values["producer"].ToString()%></span>            
             </div>
             <div class="list_categorys">
                 <%foreach (var item in getlistProduct())
@@ -47,7 +17,6 @@
                             <img src="<%=item.HinhAnhDaiDien %>" alt="">
                         </a>
                     </div>
-
                     <div class="content">
                         <h3><%=item.TenSP %></h3>
                         <p>
@@ -65,9 +34,6 @@
         </div>
         <div class="clear"></div>
         <%if (WebNangCaoNhom5.App_Start.PageList.totalPage > 1)
-
-
-
             {
                 int totalPage = WebNangCaoNhom5.App_Start.PageList.totalPage;
                 int maxPage = WebNangCaoNhom5.App_Start.PageList.maxPage;
@@ -76,16 +42,12 @@
                 var startPageIndex = Math.Max(1, currntPage - maxPage / 2);
                 %>
         <div class="pagination">
-
-
             <ul>
                 <%if (WebNangCaoNhom5.App_Start.PageList.pageIndex > 1) {%>                  
                 <li>
                     <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=1"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
                 <li><a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex-1 %>"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
                 <%} %>
-
-
                 <%for (int i = startPageIndex; i <= endPageIndex; i++)
                     {
                         if (i == WebNangCaoNhom5.App_Start.PageList.pageIndex)
@@ -112,7 +74,6 @@
                 </li>
                 <%} %>
             </ul>
-
         </div>
              <%}
             else
@@ -120,5 +81,5 @@
         <span>Không có sản phẩm nào</span>
         <%} %>
     </div>
-
+    <script src="Asset/Client/js/ListProduct.js"></script>
 </asp:Content>

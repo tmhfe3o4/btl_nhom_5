@@ -27,7 +27,12 @@ namespace WebNangCaoNhom5.UserControl
             {
                 return 0;
             }
-            return lst.Count;
+            int count = 0;
+            foreach(ItemCart itemCart in lst)
+            {
+                count += itemCart.soLuong;
+            }
+            return count;
         }
         
     }

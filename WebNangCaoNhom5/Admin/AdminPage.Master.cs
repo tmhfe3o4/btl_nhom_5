@@ -11,11 +11,11 @@ namespace WebNangCaoNhom5.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //var session = Session["admin"];
-            //if (session == null)
-            //{
-            //    Response.Redirect("/Admin/Login.aspx");
-            //}
+
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("/Admin/Login.aspx");
+            }
         }
     }
 }

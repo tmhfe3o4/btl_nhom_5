@@ -16,13 +16,22 @@ namespace WebNangCaoNhom5.Admin
 
         protected void Unnamed_ServerClick(object sender, EventArgs e)
         {
-            if (email.Value == "admin" && password.Value == "admin")
+            if (email.Value == "ngokprao121@gmail.com" && password.Value == "admin")
             {
                 Session["admin"] = "Admin";
                 Response.Redirect("/Admin/Index.aspx");
             }
             else
-                Response.Write("<script>alert('Thông tin sai!');</script>");
+            {
+                ScriptManager.RegisterStartupScript(this,
+                                   this.GetType(),
+                                     "Script",
+                                     "alert('Tài khoản hoặc mật khẩu không chính xác')",
+                                     true);
+            }
+               
         }
+
+       
     }
 }

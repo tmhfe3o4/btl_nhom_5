@@ -20,14 +20,22 @@ namespace WebNangCaoNhom5
         {
            
         }
-        public List<SanPham> getListNewProduct(int MaNSX)
+        public List<SanPham> getListNewProduct()
         {
          
-            return db.SanPhams.Where(n => n.MaNSX == MaNSX).ToList();
+            return db.SanPhams.Where(n => n.MaNSX == 1).ToList();
         }
-        public List<NhaSanXuat> getProducer()
+        public List<SanPham> getListNewProduct1()
         {
-            return db.NhaSanXuats.Take(3).ToList();
+            return db.SanPhams.Where(n => n.MaNSX == 2).ToList();
+        }
+        public List<SanPham> getListNewProduct2()
+        {
+            return db.SanPhams.Where(n => n.MaNSX == 3).ToList();
+        }
+        public NhaSanXuat getProducer(int masp)
+        {
+            return db.NhaSanXuats.FirstOrDefault(n => n.MaNSX == db.SanPhams.FirstOrDefault(x=> x.MaSP == masp).MaNSX);
         }
         public List<HinhAnh> getImage(int MaSP)
         {

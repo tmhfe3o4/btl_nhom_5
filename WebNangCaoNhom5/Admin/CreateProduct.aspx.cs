@@ -37,17 +37,17 @@ namespace WebNangCaoNhom5.Admin
             sp.MaNCC = 1;
             sp.MaNSX = int.Parse(Page.Request.Form["txt"]);
             sp.MaLoaiSP = 1;
-            db.SanPhams.InsertOnSubmit(sp);
-            db.SubmitChanges();
-            string[] x = anhlienquan.InnerText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            foreach (var item in x)
-            {
-                HinhAnh hinhAnh = new HinhAnh();
-                hinhAnh.MaSP = sp.MaSP;
-                hinhAnh.TenHinhAnh = item;
-                db.HinhAnhs.InsertOnSubmit(hinhAnh);
-            }
-            db.SubmitChanges();
+            //db.SanPhams.InsertOnSubmit(sp);
+            //db.SubmitChanges();
+            //string[] x = anhlienquan.InnerText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            //foreach (var item in x)
+            //{
+            //    HinhAnh hinhAnh = new HinhAnh();
+            //    hinhAnh.MaSP = sp.MaSP;
+            //    hinhAnh.TenHinhAnh = item;
+            //    db.HinhAnhs.InsertOnSubmit(hinhAnh);
+            //}
+            //db.SubmitChanges();
             tensp.Value = "";
             tomtat.Value = "";
             soluong.Value = "";
@@ -55,6 +55,7 @@ namespace WebNangCaoNhom5.Admin
             dongia.Value = "";
             anhdaidien.Value = "";
             anhlienquan.Value = "";
+
         }
         public List<NhaSanXuat> getNSX()
         {

@@ -13,6 +13,24 @@ namespace WebNangCaoNhom5.Admin {
     public partial class Login {
         
         /// <summary>
+        /// scriplogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager scriplogin;
+        
+        /// <summary>
+        /// panelLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel panelLogin;
+        
+        /// <summary>
         /// email control.
         /// </summary>
         /// <remarks>

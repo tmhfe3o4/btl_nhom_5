@@ -11,33 +11,48 @@ namespace WebNangCaoNhom5.Admin
     public partial class EditProduct : System.Web.UI.Page
     {
         WebDienThoaiDataContext db = new WebDienThoaiDataContext();
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //if (Session["admin"] == null)
-            //{
-            //    Response.Redirect("/Admin/Login.aspx");
-            //}
-            //else
-            
-           
-            //}
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("/Admin/Login.aspx");
+            }
+            else
+            {
+                if (!IsPostBack)
+                {
+                    SanPham sp = getsp();
+                    tensp.Value = sp.TenSP;
+                    tomtat.Value = sp.TomTat;
+                    CKEditorControl1.Text = sp.ChiTiet;
+                    soluong.Value = sp.SoLuongTon.ToString();
+                    dongia.Value = sp.DonGia.ToString();
+                    anhdaidien.Value = sp.HinhAnhDaiDien;
+                }
+
+            }
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            SanPham sp1 = getsp();
-            sp1.TenSP = tensp.Value;
-            sp1.TomTat = tomtat.Value;
-            sp1.MaNSX = int.Parse(Page.Request.Form["txt"]);
-            sp1.ChiTiet = CKEditorControl1.Text;
-            sp1.SoLuongTon = int.Parse(soluong.Value);
-            sp1.DonGia = decimal.Parse(dongia.Value);
-            sp1.HinhAnhDaiDien = anhdaidien.Value;
+            SanPham sp = getsp();
+            sp.TenSP = tensp.Value;
+            sp.TomTat = tomtat.Value;
+            sp.MaNSX = int.Parse(Page.Request.Form["txt"]);
+            sp.ChiTiet = CKEditorControl1.Text;
+            sp.SoLuongTon = int.Parse(soluong.Value);
+            sp.DonGia = decimal.Parse(dongia.Value);
+            sp.HinhAnhDaiDien = anhdaidien.Value;
             db.SubmitChanges();
         }
-       public SanPham getsp()
+        public SanPham getsp()
         {
+            if (Page.RouteData.Values["id"].ToString() == null || db.SanPhams.FirstOrDefault(n => n.MaSP == int.Parse(Page.RouteData.Values["id"].ToString())) == null)
+            {
+                Response.Redirect("/404NotFound.aspx");
+                return null;
+            }
             return db.SanPhams.FirstOrDefault(n => n.MaSP == int.Parse(Page.RouteData.Values["id"].ToString()));
         }
         public List<NhaSanXuat> getNSX()

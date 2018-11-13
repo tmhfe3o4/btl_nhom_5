@@ -26,11 +26,17 @@ namespace WebNangCaoNhom5
            else
                 pageIndex = (page) ?? 1;
             string TenNSX = Page.RouteData.Values["producer"].ToString();
+            
             if (TenNSX == null)
             {
-                TenNSX = Request.QueryString["page"].ToString();
+                TenNSX = Request.QueryString["producer"].ToString();
             }
+            
             NhaSanXuat nsx = db.NhaSanXuats.FirstOrDefault(n=>n.TenNSX==TenNSX);
+            if (TenNSX == null || nsx==null)
+            {
+                Response.Redirect("/404NotFound.aspx");
+            }
             List<SanPham> lst = db.SanPhams.Where(n => n.MaNSX == nsx.MaNSX).ToList();
             PageList.pageIndex = pageIndex;
 

@@ -2,7 +2,11 @@
 
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageWraper" runat="server">
-    <script src="../Asset/Admin/js/Plugin/ckfinder/ckfinder.js"></script>
+    <form runat="server">
+        <asp:ScriptManager ID="Scrip" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel runat="server" ID="Update">
+            <ContentTemplate>
+
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Thêm sản phẩm</h1>
@@ -15,11 +19,10 @@
                 <div class="panel-heading">
                     Thông tin sản phẩm
                 </div>
-
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form runat="server" method="post" id="formUpload">
+                            
                                 <div class="form-group">
                                     <label>Tên sản phẩm</label>
                                     <input type="text" runat="server" class="form-control" id="tensp" placeholder="Tên sản phẩm">
@@ -64,41 +67,9 @@
                                     <textarea readonly="readonly" style="cursor: pointer" cols="60" rows="10" id="anhlienquan" runat="server"></textarea>
                                 </div>
                                 <asp:Button  cssclass="btn btn-primary" onclientclick="return check();" runat="server" id="btnSubmit" onclick="btnSubmit_Click" text="Thêm" />
-                            </form>
-                            <script>
-                                $(function () {
-                                    $("input:file").attr("accept", "image/x-png,image/gif,image/jpeg");
-                                    function check() {
-                                        return true;
-                                    };
-                                    $("#PageWraper_anhlienquan").click(function () {
-
-                                        var finder = new CKFinder();
-                                        finder.selectActionFunction = function (fileUrl, file, files) {
-                                            var src = "";
-                                            for (var i = 0; i < files.length; i++) {
-                                                if (files[i]["url"]) {
-                                                    src += files[i]["url"] + "\n";
-                                                }
-                                            }
-                                            $("#PageWraper_anhlienquan").text(src);
-                                        };
-                                        finder.popup();
-                                    });
-                                    $("#PageWraper_anhdaidien").click(function () {
-                                        var finder = new CKFinder();
-                                        finder.selectActionFunction = function (fileUrl, file, files) {
-                                            for (var i = 0; i < files.length; i++)
-                                                $("#PageWraper_anhdaidien").text(files[i].url);
-                                        };
-                                        finder.popup();
-                                    });
-                                });
-
-                            </script>
+                            
                         </div>
                         <!-- /.col-lg-6 (nested) -->
-
                         <!-- /.col-lg-6 (nested) -->
                     </div>
                     <!-- /.row (nested) -->
@@ -109,4 +80,10 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
+                
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+    <script src="../Asset/Admin/js/CreateProDuct.js"></script>
+    <script src="../Asset/Admin/js/Plugin/ckfinder/ckfinder.js"></script>
 </asp:Content>

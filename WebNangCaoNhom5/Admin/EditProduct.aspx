@@ -2,8 +2,6 @@
 
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageWraper" runat="server">
-    <script src="../Asset/Admin/js/Plugin/ckfinder/ckfinder.js"></script>
-
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Sửa sản phẩm</h1>
@@ -16,7 +14,6 @@
                 <div class="panel-heading">
                     Thông tin sản phẩm
                 </div>
-
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
@@ -25,14 +22,12 @@
                                     <label>Tên sản phẩm</label>
                                     <input type="text" runat="server" class="form-control" id="tensp" placeholder="Tên sản phẩm">
                                 </div>
-
                                 <div class="form-group">
                                     <label>Tóm tắt</label>
                                     <input type="text" runat="server" class="form-control" id="tomtat" placeholder="Tóm tắt">
                                 </div>
                                 <div class="form-group">
                                     <label>Hãng sản xuất</label>
-
                                     <select name="txt">
                                         <%foreach (var item in getNSX())
                                             {
@@ -45,7 +40,7 @@
                                             { %>
                                         <option value="<%=item.MaNSX %>"><%=item.TenNSX %></option>
                                         <% }
-                                        } %>
+                                        } %>                                        
                                     </select>
                                     <%--<div name="abc">
                                         <input type="radio" name="1" value="1" />
@@ -70,24 +65,6 @@
                                 </div>
                                 <asp:Button CssClass="btn btn-primary" OnClientClick="return check();" runat="server" ID="btnSubmit" OnClick="btnSubmit_Click" Text="Lưu" />
                             </form>
-                            <script>
-                                $(function () {
-                                    $("input:file").attr("accept", "image/x-png,image/gif,image/jpeg");
-                                    function check() {
-                                        return true;
-                                    };
-
-                                    $("#PageWraper_anhdaidien").click(function () {
-                                        var finder = new CKFinder();
-                                        finder.selectActionFunction = function (fileUrl, file, files) {
-                                            for (var i = 0; i < files.length; i++)
-                                                $("#PageWraper_anhdaidien").text(files[i].url);
-                                        };
-                                        finder.popup();
-                                    });
-                                });
-
-                            </script>
                         </div>
                         <!-- /.col-lg-6 (nested) -->
 
@@ -101,4 +78,6 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
+    <script src="../Asset/Admin/js/Plugin/ckfinder/ckfinder.js"></script>
+    <script src="../Asset/Admin/js/EditProduct.js"></script>
 </asp:Content>
