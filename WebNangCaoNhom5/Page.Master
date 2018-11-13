@@ -1,0 +1,224 @@
+﻿<%-- đã hiểu hết --%>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="WebNangCaoNhom5.Page" %>
+<%@ Register TagPrefix="UC" TagName="Cart" Src="~/UserControl/Cart.ascx" %>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <%-- css --%>
+    <link href="Asset/Client/css/Style.css" rel="stylesheet" />
+    <%-- javascript --%>
+    <script src="Asset/Client/js/jquerry.js"></script>
+    <script src="Scripts/jquery.unobtrusive-ajax.js"></script>
+    <%-- font awesome icon --%>
+    <link href="Asset/Client/fontawesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="Asset/Client/fontawesome/css/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+    <%-- header --%>
+    <div class="header">
+        <div class="header_top">
+            <div class="logo">
+                <a href="/Home">
+                    <img src="Asset/Client/image/logoWeb.png" alt="">
+                </a>
+            </div>
+            <div id="load" class="cart">
+                <UC:Cart runat="server" />
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="menunav" id="menunav">
+                <ul>
+                    <li>
+                        <a href="/Home">
+                            <div class="icon">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            </div>
+                            <div class="name">
+                                <span data-text="Trang chủ">Trang chủ
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<%=Page.GetRouteUrl("tintuc", null) %>">
+                            <div class="icon">
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="name">
+                                <span data-text="Tin tức">Tin tức
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Services">
+                            <div class="icon">
+                                <i class="fa fa-cogs" aria-hidden="true"></i>
+                                <i class="fa fa-cogs" aria-hidden="true"></i>
+                            </div>
+                            <div class="name">
+                                <span data-text="Dịch vụ">Dịch vụ
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/DieuKhoan">
+                            <div class="icon">
+                                <i class="fa fa-shield" aria-hidden="true"></i>
+                                <i class="fa fa-shield" aria-hidden="true"></i>
+                            </div>
+                            <div class="name">
+                                <span data-text=" Điều khoản">Điều khoản
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/AboutUs">
+                            <div class="icon">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </div>
+                            <div class="name">
+                                <span data-text="Thông tin shop">Thông tin shop
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/ContactUS">
+                            <div class="icon">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="name">
+                                <span data-text=" Liên hệ">Liên hệ
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="Search">
+                            <input id="keyword" type="text" placeholder="Type...">
+                            <input id="Search" type="submit" value="Search" />
+                            <script>
+                                $(function () {
+                                    $("#keyword").on("keydown", function (e) {
+                                        if (e.keyCode == 13)
+                                            document.getElementById("Search").click();
+                                    });
+                                    $("#Search").click(function () {
+                                        if ($("#keyword").val().trim() != "")
+                                            window.location.href = "Search.aspx?keyword=" + $("#keyword").val().trim();
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </li>
+                </ul>
+                <script>
+                    $(document).ready(function () {
+                        $('.menunav ul li a').click(function () {
+                            $('.menunav ul li a').each(function () {
+                                $('.menunav ul li a').removeClass("active");
+                            });
+                            $(this).addClass("active");
+                        })
+                    })
+                </script>
+            </div>
+
+        </div>
+
+
+    </div>
+    <asp:ContentPlaceHolder runat="server" ID="body">
+    </asp:ContentPlaceHolder>
+
+    <div class="footer">
+        <div class="top_footer">
+            <div class="column">
+
+                <a href="/Home">HIPHONE</a>
+            </div>
+            <div class="column">
+
+                <a href="/News">Tin tức</a>
+            </div>
+            <div class="column">
+
+                <a href="/ContactUS">Liên hệ</a>
+            </div>
+            <div class="column">
+
+                <a href="/AboutUs">Thông tin SHOP</a>
+            </div>
+            <div class="column">
+
+                <a href="Services.aspx">Dịch vụ</a>
+            </div>
+            <div class="column">
+
+                <a href="/DieuKhoan">Điều khoản</a>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="box-contact">
+                <div class="icon">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </div>
+                <div class="detail">
+                    <h3>Hà Nội - Việt Nam</h3>
+                </div>
+            </div>
+            <div class="box-contact">
+                <div class="icon">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="detail">
+                    <h3>0989601997</h3>
+                </div>
+            </div>
+            <div class="box-contact">
+                <div class="icon">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="detail">
+                    <h3>lhngoc2497@gmail.com</h3>
+                </div>
+            </div>
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href="https://www.facebook.com/ngoczesua"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://plus.google.com/112249902438308474897"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="coppyright">
+            &copy; 2018 Nhóm 5 - Bài tập lớn Lập trình web nâng cao
+        </div>
+    </div>
+    <div class="alert" id="messenge">
+
+        <script>
+            $(function () {
+                $("#btnclose").click(function () {
+                    $("#messenge").removeClass("activealert");
+                });
+            });
+        </script>
+    </div>
+
+
+</body>
+
+</html>
