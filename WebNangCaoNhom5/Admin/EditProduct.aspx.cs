@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -36,6 +37,12 @@ namespace WebNangCaoNhom5.Admin
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            Thread.Sleep(2000);
+            ScriptManager.RegisterStartupScript(this,
+                              this.GetType(),
+                                "Script",
+                                " $('.back').css('display','none');",
+                                true);
             SanPham sp = getsp();
             sp.TenSP = tensp.Value;
             sp.TomTat = tomtat.Value;

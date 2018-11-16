@@ -1,7 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="CreateProduct.aspx.cs" Inherits="WebNangCaoNhom5.Admin.CreateProduct" %>
+﻿<%@ Page Title="Thêm sản phẩm" EnableViewState="false" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="CreateProduct.aspx.cs" Inherits="WebNangCaoNhom5.Admin.CreateProduct" %>
 
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageWraper" runat="server">
+     <div class="back">
+        <div class="loading">       
+            <script>
+                $(function () {
+                    $("#PageWraper_btnSubmit").click(function () {
+                        $('.back').css('display', 'block');
+                    });
+                });
+            </script>
+        </div>
+    </div>
     <form runat="server">
         <asp:ScriptManager ID="Scrip" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel runat="server" ID="Update">
@@ -34,7 +45,7 @@
                                 <div class="form-group">
                                     <label>Hãng sản xuất</label>
                                    
-                                    <select name="txt">
+                                    <select name="txt" style="margin: 0 2px; padding: 5px 5px; border-radius: 4px; width: 100px; transition: .1s; outline: none; display: inline-block;">
                                         <%foreach (var item in getNSX())
                                             { %>
                                         <option  value="<%=item.MaNSX %>" ><%=item.TenNSX %></option>
@@ -86,4 +97,5 @@
     </form>
     <script src="../Asset/Admin/js/CreateProDuct.js"></script>
     <script src="../Asset/Admin/js/Plugin/ckfinder/ckfinder.js"></script>
+    <link href="../Asset/Admin/dist/css/Loading.css" rel="stylesheet" />
 </asp:Content>

@@ -110,6 +110,7 @@
     </Content>
     <Content Include="Asset\Admin\data\flot-data.js" />
     <Content Include="Asset\Admin\data\morris-data.js" />
+    <Content Include="Asset\Admin\dist\css\Loading.css" />
     <Content Include="Asset\Admin\dist\css\ManagerProduct.css" />
     <Content Include="Asset\Admin\dist\css\sb-admin-2.css" />
     <Content Include="Asset\Admin\dist\css\sb-admin-2.min.css" />

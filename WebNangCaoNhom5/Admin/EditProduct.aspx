@@ -1,7 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="EditProduct.aspx.cs" Inherits="WebNangCaoNhom5.Admin.EditProduct" %>
+﻿<%@ Page Title="Sửa sản phẩm"  Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="EditProduct.aspx.cs" Inherits="WebNangCaoNhom5.Admin.EditProduct" %>
 
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageWraper" runat="server">
+    <div class="back">
+        <div class="loading">       
+            <script>
+                $(function () {
+                    $("#PageWraper_btnSubmit").click(function () {
+                        $('.back').css('display', 'block');
+                    });
+                });
+            </script>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Sửa sản phẩm</h1>
@@ -28,7 +39,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Hãng sản xuất</label>
-                                    <select name="txt">
+                                    <select name="txt" style="margin: 0 2px; padding: 5px 5px; border-radius: 4px; width: 100px; transition: .1s; outline: none; display: inline-block;">
                                         <%foreach (var item in getNSX())
                                             {
                                                 if (item.MaNSX == getsp().MaNSX)
@@ -79,5 +90,6 @@
         <!-- /.col-lg-12 -->
     </div>
     <script src="../Asset/Admin/js/Plugin/ckfinder/ckfinder.js"></script>
+    <link href="../Asset/Admin/dist/css/Loading.css" rel="stylesheet" />
     <script src="../Asset/Admin/js/EditProduct.js"></script>
 </asp:Content>

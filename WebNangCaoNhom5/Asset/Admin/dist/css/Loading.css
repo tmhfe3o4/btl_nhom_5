@@ -1,0 +1,121 @@
+﻿
+.animationLoading {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    border: 1px solid;
+    border-color: #e5e6e9;
+    border-radius: 3px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 12px;
+}
+
+@keyframes animate {
+    from {
+        background-position: -400px 0
+    }
+
+    to {
+        background-position: 400px 0
+    }
+}
+
+#container {
+    width: 100%;
+    height: 30px;
+}
+
+#one, #two, #three, #four, #five, #six, #seven {
+    position: relative;
+    overflow: hidden;
+    background-color: #CCC;
+    height: 6px;
+    animation: animate 1.5s linear infinite;
+    background: linear-gradient(to right,#eeeeee 8%, #dddddd 18%,#eeeeee 33%);
+    background-size: 800px 104px;
+}
+
+#one {
+    left: 16px;
+    height: 100%;
+    width: 22%;
+    top: 25px;
+}
+
+#two {
+    left: 252px;
+    top: -5px;
+    width: 17%;
+    height: 100%;
+}
+
+#three {
+    left: 69%;
+    top: -36px;
+    width: 25%;
+    height: 110%;
+}
+
+#four {
+    left: 16px;
+    top: 30px;
+    width: 97%;
+    height: 15%;
+}
+
+#five {
+    height: 7%;
+    left: 16px;
+    top: 42px;
+    width: 97%;
+}
+
+#six {
+    left: 16px;
+    top: 60px;
+    width: 97%;
+    height: 7%;
+}
+
+#seven {
+    left: 16px;
+    top: 78px;
+    width: 97%;
+    height: 7%;
+}
+.loading {
+    border-radius: 50%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    border: 10px solid #808080;
+    animation: animate1 1s linear infinite;
+    border-top: 10px solid;
+}
+
+.back {
+    background: whitesmoke;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    opacity: .6;
+    display: none;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

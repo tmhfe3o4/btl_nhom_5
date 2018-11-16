@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="ListProductAdmin.aspx.cs" Inherits="WebNangCaoNhom5.Admin.ListProductAdmin" %>
+﻿<%@ Page Title="Danh sách sản phẩm" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="ListProductAdmin.aspx.cs" Inherits="WebNangCaoNhom5.Admin.ListProductAdmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageWraper" runat="server">
     <div class="row">
@@ -8,7 +8,27 @@
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
-    <div class="row">
+    <div class="row" style="position:relative">
+         <!--Loading-->
+    <div class="animationLoading">
+        <div id="container">
+            <div id="one"></div>
+            <div id="two"></div>
+            <div id="three"></div>
+        </div>
+        <div id="four"></div>
+        <div id="five"></div>
+        <div id="six"></div>
+        <div id="seven"></div>
+    </div>
+        <script>
+            $(function () {
+                setTimeout(function () {
+                    $(".animationLoading").hide();
+                }, 2000);
+               
+            });
+        </script>
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -94,4 +114,5 @@
     <!-- Modal -->
     <script src="../Asset/Admin/js/ManaGerProduct.js"></script>
     <link href="../Asset/Admin/dist/css/ManagerProduct.css" rel="stylesheet" />
+    <link href="../Asset/Admin/dist/css/Loading.css" rel="stylesheet" />
 </asp:Content>

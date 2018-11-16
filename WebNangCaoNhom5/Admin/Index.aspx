@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="WebNangCaoNhom5.Admin.Index" %>
+﻿<%@ Page Title="Trang chủ" Language="C#" MasterPageFile="~/Admin/AdminPage.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="WebNangCaoNhom5.Admin.Index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageWraper" runat="server">
     <div class="container-fluid">

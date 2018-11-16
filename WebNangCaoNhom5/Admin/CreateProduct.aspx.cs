@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Hosting;
 using System.Web.Services;
@@ -25,6 +26,12 @@ namespace WebNangCaoNhom5.Admin
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            Thread.Sleep(2000);
+            ScriptManager.RegisterStartupScript(this,
+                              this.GetType(),
+                                "Script",
+                                " $('.back').css('display','none');",
+                                true);
             //Response.Write(Page.Request.Form["tenInput"]);
             SanPham sp = new SanPham();
             sp.TenSP = tensp.Value;
@@ -37,24 +44,18 @@ namespace WebNangCaoNhom5.Admin
             sp.MaNCC = 1;
             sp.MaNSX = int.Parse(Page.Request.Form["txt"]);
             sp.MaLoaiSP = 1;
-            //db.SanPhams.InsertOnSubmit(sp);
-            //db.SubmitChanges();
-            //string[] x = anhlienquan.InnerText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            //foreach (var item in x)
-            //{
-            //    HinhAnh hinhAnh = new HinhAnh();
-            //    hinhAnh.MaSP = sp.MaSP;
-            //    hinhAnh.TenHinhAnh = item;
-            //    db.HinhAnhs.InsertOnSubmit(hinhAnh);
-            //}
-            //db.SubmitChanges();
-            tensp.Value = "";
-            tomtat.Value = "";
-            soluong.Value = "";
-            CKEditorControl1.Text = "";
-            dongia.Value = "";
-            anhdaidien.Value = "";
-            anhlienquan.Value = "";
+            db.SanPhams.InsertOnSubmit(sp);
+            db.SubmitChanges();
+            string[] x = anhlienquan.InnerText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var item in x)
+            {
+                HinhAnh hinhAnh = new HinhAnh();
+                hinhAnh.MaSP = sp.MaSP;
+                hinhAnh.TenHinhAnh = item;
+                db.HinhAnhs.InsertOnSubmit(hinhAnh);
+            }
+            db.SubmitChanges();
+
 
         }
         public List<NhaSanXuat> getNSX()
