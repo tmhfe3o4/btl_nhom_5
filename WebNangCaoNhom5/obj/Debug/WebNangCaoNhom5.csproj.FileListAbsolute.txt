@@ -58,6 +58,7 @@ D:\C#\WebNangCao\BTL\btl_nhom_5\WebNangCaoNhom5\bin\CKFinder_ImageResize.pdb
 D:\C#\WebNangCao\BTL\btl_nhom_5\WebNangCaoNhom5\bin\CKFinder_Watermark.pdb
 D:\C#\WebNangCao\BTL\btl_nhom_5\WebNangCaoNhom5\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\C#\WebNangCao\BTL\btl_nhom_5\WebNangCaoNhom5\bin\Newtonsoft.Json.xml
+D:\C#\WebNangCao\BTL\btl_nhom_5\WebNangCaoNhom5\obj\Debug\WebNangCaoNhom5.csprojAssemblyReference.cache
 D:\C#\WebNangCao\BTL\btl_nhom_5\WebNangCaoNhom5\obj\Debug\WebNangCaoNhom5.csproj.CoreCompileInputs.cache
 D:\C#\WebNangCao\BTL\btl_nhom_5\WebNangCaoNhom5\obj\Debug\WebNangCaoNhom5.csproj.CopyComplete
 D:\C#\WebNangCao\BTL\btl_nhom_5\WebNangCaoNhom5\obj\Debug\WebNangCaoNhom5.dll

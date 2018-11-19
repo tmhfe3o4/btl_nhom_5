@@ -28,7 +28,6 @@ $(function () {
             url: "Index.aspx/LoadUserControl",
             success: function (data) {
                 $("#load").load(location.href + " #load");
-
                 $(".alert").addClass("activealert");
                 $(".alert").text("Đặt thành công!");
                 $(".alert").css("background", "#b2cea7")

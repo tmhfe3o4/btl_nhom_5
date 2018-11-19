@@ -1,12 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page.Master" AutoEventWireup="true" CodeBehind="ListProduct.aspx.cs" Inherits="WebNangCaoNhom5.ListProduct" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
+      <%if (getlistProduct().Count > 1)
+          { %>
 
+                
+               
     <div class="content">
         <div class="news_products">
             <div class="head_categorys">
                 <span><%=Page.RouteData.Values["producer"].ToString()%></span>            
             </div>
+          
             <div class="list_categorys">
                 <%foreach (var item in getlistProduct())
                     { %>
@@ -43,10 +48,11 @@
                 %>
         <div class="pagination">
             <ul>
-                <%if (WebNangCaoNhom5.App_Start.PageList.pageIndex > 1) {%>                  
+                <%if (WebNangCaoNhom5.App_Start.PageList.pageIndex > 1)
+                    {%>                  
                 <li>
                     <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=1"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-                <li><a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex-1 %>"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                <li><a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex - 1 %>"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
                 <%} %>
                 <%for (int i = startPageIndex; i <= endPageIndex; i++)
                     {
@@ -57,17 +63,17 @@
                     <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=i %>" class="active"><%=i %></a>
                 </li>
                 <%}
-                else
-                {%>
+                    else
+                    {%>
                 <li>
                     <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=i %>"><%=i %></a>
                 </li>
                 <% }
-                } %>
+                    } %>
                 <%if (WebNangCaoNhom5.App_Start.PageList.pageIndex < WebNangCaoNhom5.App_Start.PageList.totalPage)
                     {%>
                 <li>
-                    <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex+1 %>""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex + 1 %>""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.totalPage %>""><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
@@ -75,11 +81,13 @@
                 <%} %>
             </ul>
         </div>
-             <%}
-            else
-            {%>
-        <span>Không có sản phẩm nào</span>
-        <%} %>
+             <%}%>
+
+                
     </div>
+    <%}  else
+                 {%>
+        <span style="margin-top: 40px;position: absolute;">Không có sản phẩm nào</span>
+        <%} %>
     <script src="Asset/Client/js/ListProduct.js"></script>
 </asp:Content>
