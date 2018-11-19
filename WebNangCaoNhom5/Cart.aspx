@@ -4,13 +4,10 @@
 
     <div class="content">
         <%
-
             if (getCarts() != null)
             {%>
         <div class="list_cart">
-
             <table class="table">
-
                 <thead>
                     <tr>
                         <td>Hình ảnh</td>
@@ -37,11 +34,7 @@
                         <td class="price"><%=string.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",item.SP.DonGia) %></td>
                         <td>
                             <div>
-
-
                                 <span><%=item.soLuong %></span>
-
-
                             </div>
                         </td>
                         <td class="total"><%=string.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",item.SP.DonGia*item.soLuong) %></td>
@@ -53,10 +46,7 @@
                     </tr>
                     <%}%>
                 </tbody>
-
-            </table>
-
-            
+            </table>           
             <div class="total_price">
                 Tổng thành tiền: <span id="totalpay"><%=string.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",total) %></span>
             </div>
