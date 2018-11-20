@@ -51,8 +51,8 @@
                 <%if (WebNangCaoNhom5.App_Start.PageList.pageIndex > 1)
                     {%>                  
                 <li>
-                    <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=1"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-                <li><a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex - 1 %>"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                    <a href="/san-pham--<%=Page.RouteData.Values["producer"].ToString() %>?page=1"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                <li><a href="/san-pham--<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex - 1 %>"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
                 <%} %>
                 <%for (int i = startPageIndex; i <= endPageIndex; i++)
                     {
@@ -60,23 +60,23 @@
                         {
                 %>
                 <li>
-                    <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=i %>" class="active"><%=i %></a>
+                    <a href="/san-pham--<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=i %>" class="active"><%=i %></a>
                 </li>
                 <%}
                     else
                     {%>
                 <li>
-                    <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=i %>"><%=i %></a>
+                    <a href="/san-pham--<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=i %>"><%=i %></a>
                 </li>
                 <% }
                     } %>
                 <%if (WebNangCaoNhom5.App_Start.PageList.pageIndex < WebNangCaoNhom5.App_Start.PageList.totalPage)
                     {%>
                 <li>
-                    <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex + 1 %>""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <a href="/san-pham--<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.pageIndex + 1 %>""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="/<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.totalPage %>""><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    <a href="/san-pham--<%=Page.RouteData.Values["producer"].ToString() %>?page=<%=WebNangCaoNhom5.App_Start.PageList.totalPage %>""><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </li>
                 <%} %>
             </ul>
