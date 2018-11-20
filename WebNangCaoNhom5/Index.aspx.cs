@@ -48,12 +48,15 @@ namespace WebNangCaoNhom5
 
                 ipAddress = Request.ServerVariables["REMOTE_ADDR"];
             }
-            HttpCookie ck = new HttpCookie("abc");
-            string cks;
+            string returnUrl = "";
+            HttpCookie ck = Request.Cookies["NameOfCookies"];
+            if (Request.UrlReferrer != null)
+                returnUrl = Request.UrlReferrer.ToString();
+            string cks = "";
             if (ck != null)
-                 cks= ck.Name;
+                cks = ck.Name;
 
-            test.Value = sesid + "\n" + s+"\n"+ipAddress+"\n"+cks;
+            test.Value = sesid + "\n" + s + "\n" + ipAddress + "\n" + cks + "\n" + returnUrl;
         }
         public List<SanPham> getListNewProduct()
         {
