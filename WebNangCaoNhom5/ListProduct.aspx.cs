@@ -42,7 +42,7 @@ namespace WebNangCaoNhom5
 
             PageList.totalPage = (int)Math.Ceiling((double)lst.Count / PageList.pageSize);
 
-            return lst.OrderByDescending(n=>n.NgayCapNhat).Skip((PageList.pageIndex-1)*pageIndex).Take(PageList.pageSize).ToList();
+            return lst.OrderByDescending(n=>n.NgayCapNhat).Skip((PageList.pageIndex-1)*PageList.pageSize).Take(PageList.pageSize).ToList();
         }
        
     }
