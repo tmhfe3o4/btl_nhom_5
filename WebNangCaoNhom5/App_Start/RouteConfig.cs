@@ -25,7 +25,7 @@ namespace WebNangCaoNhom5
             
             
             routes.MapPageRoute("cart", "Cart", "~/Cart.aspx");
-            routes.MapPageRoute("pagelist", "san-pham/{producer}/{page}", "~/ListProduct.aspx");
+            routes.MapPageRoute("pagelist", "san-pham--{producer}/{page}", "~/ListProduct.aspx");
             routes.MapPageRoute("product", "san-pham--{producer}", "~/ListProduct.aspx");
             routes.MapPageRoute("edit", "chinh-sua/{id}", "~/Admin/EditProduct.aspx");
         }
