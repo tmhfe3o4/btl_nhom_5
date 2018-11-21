@@ -25,16 +25,18 @@
             $(function () {
                 setTimeout(function () {
                     $(".animationLoading").hide();
+                    $(".col-lg-12").show();
+
                 }, 2000);
                
             });
         </script>
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="display:none">
             <div class="panel panel-default">
                 <div class="panel-heading">
                 </div>
                 <!-- /.panel-heading -->
-                <div class="panel-body" data-ng-app="myapp" data-ng-controller="getproduct">
+                <div class="panel-body"  data-ng-controller="getproduct">
                     <div style="display: flex; float: left">
                         <label style="font-weight: normal">
                             Hiện theo

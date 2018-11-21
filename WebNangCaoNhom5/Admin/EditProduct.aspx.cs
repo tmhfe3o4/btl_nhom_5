@@ -52,6 +52,8 @@ namespace WebNangCaoNhom5.Admin
             sp.DonGia = decimal.Parse(dongia.Value);
             sp.HinhAnhDaiDien = anhdaidien.Value;
             db.SubmitChanges();
+
+
         }
         public SanPham getsp()
         {

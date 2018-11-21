@@ -1,8 +1,21 @@
 ﻿$(function () {
     $("input:file").attr("accept", "image/x-png,image/gif,image/jpeg");
-    function checkSubmit() {
-        return true;
-    };
+    
+    //$("#formCreate").validate({
+    //    rule: {
+    //        <%= tensp.UniqueID %>: {
+    //            required: true,
+    //            minlength: 2
+    //        }
+    //    },
+    //    messages: {
+
+    //        <%= tensp.UniqueID %>: {
+    //            required: "Vui lòng nhập tên",
+    //            minlength: "Tên ngắn vậy, chém gió ah?"
+    //        }
+    //    }
+    //});
     $("#PageWraper_anhlienquan").click(function () {
         var finder = new CKFinder();
         finder.selectActionFunction = function (fileUrl, file, files) {

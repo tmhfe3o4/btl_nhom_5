@@ -29,6 +29,16 @@ function mycontrol($scope, $http, $route) {
                 });
         }
     };
+    $scope.Logout = function () {
+        $http.get('/WebService.asmx/Logout')
+            .then(function (response) {
+
+                window.location.href = "/Admin/Login.aspx";
+
+            });
+
+
+    }
     //Image Manager
     $scope.EdtImg = function (id) {
         $("#exampleModal").modal("show");

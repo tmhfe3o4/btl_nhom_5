@@ -7,13 +7,13 @@
 
 <head runat="server">
 
-   
-  
-    <script src="../Asset/Client/js/jquerry.js"></script>
-    
-    <title></title>
-    
 
+
+    <script src="../Asset/Client/js/jquerry.js"></script>
+
+    <title></title>
+
+    
     <!-- Bootstrap Core CSS -->
     <link href="../Asset/Admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,16 +26,14 @@
     <!-- Morris Charts CSS -->
     <link href="../Asset/Admin/vendor/morrisjs/morris.css" rel="stylesheet">
     <script src="../Asset/Admin/js/Plugin/ckeditor/ckeditor.js"></script>
+    <script src="../Asset/Admin/js/ManaGerProduct.js"></script>
     <!-- Custom Fonts -->
     <link href="../Asset/Admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-
 </head>
 
 <body>
-   
-    <div id="wrapper">
+
+    <div id="wrapper" data-ng-app="myapp">
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -59,17 +57,17 @@
 
         <div id="page-wrapper">
             <asp:ContentPlaceHolder ID="PageWraper" runat="server" />
-           
+
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
-    
+
     <!-- jQuery -->
-    
-   
+
+
     <!-- Bootstrap Core JavaScript -->
     <script src="../Asset/Admin/vendor/bootstrap/js/bootstrap.min.js"></script>
 
@@ -78,11 +76,11 @@
 
     <!-- Morris Charts JavaScript -->
     <script src="../Asset/Admin/js/Plugin/ckfinder/ckfinder.js"></script>
-  
-   
+
+
     <!-- Custom Theme JavaScript -->
 
-      
+
 </body>
 
 </html>

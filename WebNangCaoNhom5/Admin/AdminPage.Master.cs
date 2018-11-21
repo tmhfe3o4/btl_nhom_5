@@ -11,7 +11,7 @@ namespace WebNangCaoNhom5.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             if (Session["admin"] == null)
             {
                 Response.Redirect("/Admin/Login.aspx");

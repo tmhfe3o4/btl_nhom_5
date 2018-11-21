@@ -112,5 +112,11 @@ namespace WebNangCaoNhom5
             }
             return lstIm;
         }
+        [WebMethod(EnableSession =true)]
+        public void Logout()
+        {
+            HttpContext.Current.Session["admin"] = null;
+            
+        }
     }
 }

@@ -28,5 +28,6 @@ namespace WebNangCaoNhom5.Admin
           
             return JsonConvert.SerializeObject(db.SanPhams.ToList());
         }
+        
     }
 }

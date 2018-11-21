@@ -13,6 +13,15 @@ namespace WebNangCaoNhom5.Admin {
     public partial class CreateProduct {
         
         /// <summary>
+        /// formCreate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm formCreate;
+        
+        /// <summary>
         /// Scrip control.
         /// </summary>
         /// <remarks>
@@ -20,15 +29,6 @@ namespace WebNangCaoNhom5.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager Scrip;
-        
-        /// <summary>
-        /// Update control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel Update;
         
         /// <summary>
         /// tensp control.
