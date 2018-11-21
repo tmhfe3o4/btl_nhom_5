@@ -4,6 +4,7 @@
 <%@ Register Src="~/UserControl/Cart.ascx" TagPrefix="UC" TagName="Cart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
+    <textarea style="display:none" runat="server" id="test"></textarea>
     <div class="panel">
         <UC:Category runat="server" />
         <div class="slide">
