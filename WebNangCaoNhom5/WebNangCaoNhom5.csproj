@@ -1274,10 +1274,15 @@
     <Content Include="Asset\Client\fontawesome\css\font-awesome.css" />
     <Content Include="Asset\Client\fontawesome\css\font-awesome.min.css" />
     <Content Include="Asset\Client\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Asset\Client\image\14_11_2018_16_05_26_mi8-800-300.png" />
+    <Content Include="Asset\Client\image\16_11_2018_09_49_24_iphone-new-800-300.png" />
     <Content Include="Asset\Client\image\44787593_1146378055518751_6177903060468105216_n.jpg" />
     <Content Include="Asset\Client\image\anh-nen-riven-than-kiem-6-6-17.jpg" />
     <Content Include="Asset\Client\image\hung.jpg" />
     <Content Include="Asset\Client\image\icons8-sad-80.png" />
+    <Content Include="Asset\Client\image\iphone-6s-32g---phien-ban-hot-nhat_1541687542.jpg" />
+    <Content Include="Asset\Client\image\iphone-7---128-re-nhu-32-1_1542513668.jpg" />
+    <Content Include="Asset\Client\image\iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" />
     <Content Include="Asset\Client\image\logoWeb.png" />
     <Content Include="Asset\Client\image\ngoc.jpg" />
     <Content Include="Asset\Client\image\tughe.jpg" />

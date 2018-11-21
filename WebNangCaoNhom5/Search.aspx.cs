@@ -18,7 +18,8 @@ namespace WebNangCaoNhom5
 
         public List<SanPham> GetProductByKeyword()
         {
-            return db.SanPhams.Where(n => n.ChiTiet.Contains(Request.QueryString["keyword"])).ToList();
+            
+            return db.SanPhams.Where(n => n.TomTat.Contains(Request.QueryString["keyword"])).ToList();
         }
 
     }

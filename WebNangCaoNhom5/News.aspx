@@ -17,7 +17,7 @@
             <div class="left_top_news">
                 <div class="img">
                     <a href="#">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt="">
+                          <img src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt="">
                     </a>
                 </div>
 
@@ -27,7 +27,7 @@
                 <div class="item_of_4">
                     <div class="img">
                         <a href="#">
-                            <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                            <img src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt=""></a>
                     </div>
 
                     <span><a href="#">Tiêu đề tin tức</a></span>
@@ -35,21 +35,21 @@
                 <div class="item_of_4">
                     <div class="img">
                         <a href="#">
-                            <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                            <img src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt=""></a>
                     </div>
                     <span><a href="#">Tiêu đề tin tức</a></span>
                 </div>
                 <div class="item_of_4">
                     <div class="img">
                         <a href="#">
-                            <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                            <img src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt=""></a>
                     </div>
                     <span><a href="#">Tiêu đề tin tức</a></span>
                 </div>
                 <div class="item_of_4">
                     <div class="img">
                         <a href="#">
-                            <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                            <img src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt=""></a>
                     </div>
                     <span><a href="#">Tiêu đề tin tức</a></span>
                 </div>
@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="left">
                     <a href="#" class="im">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt="">
+                        <img src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt="">
                     </a>
                 </div>
 
@@ -72,7 +72,7 @@
             <div class="row">
                 <div class="left">
                     <a href="#" class="im">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt="">
+                        <img src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt="">
                     </a>
                 </div>
 
@@ -85,7 +85,7 @@
             <div class="row">
                 <div class="left">
                     <a href="#" class="im">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt="">
+                        <img src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt="">
                     </a>
                 </div>
 

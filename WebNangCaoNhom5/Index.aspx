@@ -11,23 +11,23 @@
             <ul>
                 <li class="active">
                     <a href="#">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                        <img style="height:100%" src="Asset/Client/image/14_11_2018_16_05_26_mi8-800-300.png" alt=""></a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                        <img style="height:100%" src="Asset/Client/image/16_11_2018_09_49_24_iphone-new-800-300.png" alt=""></a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                        <img style="height:100%" src="Asset/Client/image/iphone-6s-32g---phien-ban-hot-nhat_1541687542.jpg" alt=""></a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                        <img style="height:100%" src="Asset/Client/image/iphone-7---128-re-nhu-32-1_1542513668.jpg" alt=""></a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="Asset/Client/image/anh-nen-riven-than-kiem-6-6-17.jpg" alt=""></a>
+                        <img style="height:100%" src="Asset/Client/image/iphone-7-plus-cu-gia-re-nhat-ha-noi-didongmango_1538119038.jpg" alt=""></a>
                 </li>
             </ul>
         </div>

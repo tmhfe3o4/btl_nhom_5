@@ -437,11 +437,11 @@ body {
 
 
 .panel .slide ul li {
-    width: 10%;
+    width: 4%;
 }
 
     .panel .slide ul li.active {
-        width: 60%;
+        width: 84%;
     }
 
         .panel .slide ul li.active img {
