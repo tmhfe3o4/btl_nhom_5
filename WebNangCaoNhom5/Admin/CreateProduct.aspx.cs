@@ -34,8 +34,8 @@ namespace WebNangCaoNhom5.Admin
                                     "Script",
                                     " $('.back').css('display','none');",
                                     true);
-                //Response.Write(Page.Request.Form["tenInput"]);
-                SanPham sp = new SanPham();
+                Response.Write(Page.Request.Form["txtname"]);
+              SanPham sp = new SanPham();
             //sp.TenSP = tensp.Value;
             //sp.TomTat = tomtat.Value;
             //sp.SoLuongTon = int.Parse(soluong.Value);

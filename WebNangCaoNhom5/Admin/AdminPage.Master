@@ -13,7 +13,7 @@
 
     <title></title>
 
-    
+
     <!-- Bootstrap Core CSS -->
     <link href="../Asset/Admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -80,7 +80,66 @@
 
     <!-- Custom Theme JavaScript -->
 
+    <div class="modal fade" id="modelRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form id="formRegister">
+                <div class="modal-content">
+                    <div class="modal-header" style="border: none">
+                        <h5 class="modal-title">Thêm tài khoản</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" id="userName" placeholder="Username" /><br />
+                        <input type="password" class="form-control" id="password" placeholder="Password" /><br />
+                        <input type="password" class="form-control" id="repassword" placeholder="Confirm Password" />
+                    </div>
+                    <div class="modal-footer" style="border: none">
+                        <button type="button" class="btn btn-secondary" id="" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="btnSave">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#btnRegister").on("click", function (e) {
+                e.preventDefault();
+                $("#modelRegister").modal("show");
+            });
 
+            $("#btnSave").on("click", function (e) {
+                e.preventDefault();
+                if ($("#password").val() != $("#repassword").val() || $("#password").val().trim() == "" || $("#userName").val().trim() == "") {
+                    alert("Vui lòng điền đúng thông tin");
+                }
+                else {
+                    $.ajax({
+                        type: "post",
+                        data: '{username:' + $("#userName").val() + ',password:' + $("#password").val() + '}',
+                        url: "/Admin/Login.aspx/Register",
+                        contentType: "application/json; charset=utf-8",
+
+                        dataType: "json",
+                        success: function (response) {
+                            console.log(response.d);
+                            if (response.d == "Error")
+                                alert("Tài khoản đã tồn tại");
+                            else {
+                                $("#modelRegister").modal("hide");
+                            }
+
+                        },
+                        error: function (msg) {
+                           
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

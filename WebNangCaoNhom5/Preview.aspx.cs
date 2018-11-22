@@ -21,7 +21,7 @@ namespace WebNangCaoNhom5
             {
                 Response.Redirect("/404NotFound.aspx");
             }
-            return db.SanPhams.FirstOrDefault(n => n.TenSP == Page.RouteData.Values["id"].ToString());
+            return db.SanPhams.FirstOrDefault(n => n.MaSP ==int.Parse(Page.RouteData.Values["id"].ToString()));
         }
         public NhaSanXuat getProducer()
         {

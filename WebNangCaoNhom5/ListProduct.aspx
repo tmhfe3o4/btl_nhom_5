@@ -17,7 +17,7 @@
                     { %>
                 <div class="box1">
                     <div class="icon">
-                        <a href="<%=Page.GetRouteUrl("prev", new { id = item.TenSP }) %>">
+                        <a href="<%=Page.GetRouteUrl("prev", new { id = item.MaSP }) %>">
                             <span >Chi tiết</span>
                             <img src="<%=item.HinhAnhDaiDien %>" alt="">
                         </a>
