@@ -50,7 +50,7 @@
                 %>
                 <div class="box1">
                     <div class="icon">
-                        <a href="<%=Page.GetRouteUrl("prev", new { id = item.TenSP }) %>">
+                        <a href="<%=Page.GetRouteUrl("prev", new { id = item.MaSP }) %>">
                             <img src="<%=item.HinhAnhDaiDien %>" alt="">
                         </a>
                     </div>
@@ -89,7 +89,7 @@
                 %>
                 <div class="box2">
                     <div class="icon">
-                        <a href="<%=Page.GetRouteUrl("prev", new { id = item.TenSP }) %>">
+                        <a href="<%=Page.GetRouteUrl("prev", new { id = item.MaSP }) %>">
                             <img src="<%=item.HinhAnhDaiDien %>" alt="">
                         </a>
                     </div>
@@ -98,7 +98,7 @@
                         <p>
                             <%=item.TomTat %>
                         </p>
-                        <a class="prev" href="<%=Page.GetRouteUrl("prev", new { id = item.TenSP }) %>">
+                        <a class="prev" href="<%=Page.GetRouteUrl("prev", new { id = item.MaSP }) %>">
                             <span></span>
                             Xem chi tiết</a>
                         <a style="cursor: pointer" class="order" data-info="<%=item.MaSP %>">
@@ -132,7 +132,7 @@
                 %>
                 <div class="box3">
                     <div class="icon">
-                        <a href="<%=Page.GetRouteUrl("prev", new { id = item.TenSP }) %>">
+                        <a href="<%=Page.GetRouteUrl("prev", new { id = item.MaSP }) %>">
                             <img src="<%=item.HinhAnhDaiDien %>" alt="">
                         </a>
                     </div>
@@ -141,7 +141,7 @@
                         <p>
                             <%=item.TomTat %>
                         </p>
-                        <a class="prev" href="<%=Page.GetRouteUrl("prev", new { id = item.TenSP }) %>">
+                        <a class="prev" href="<%=Page.GetRouteUrl("prev", new { id = item.MaSP }) %>">
                             <span></span>
                             <span></span>
                             Xem chi tiết</a>

@@ -1528,6 +1528,7 @@
     <Compile Include="Models\ItemCart.cs" />
     <Compile Include="Models\Producer.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Models\WebDienThoai.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

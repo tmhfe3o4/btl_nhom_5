@@ -26,11 +26,11 @@
                             total += item.TongTien;
                     %>
                     <tr>
-                        <td><a href="<%=Page.GetRouteUrl("prev", new { id = item.SP.TenSP }) %>">
+                        <td><a href="<%=Page.GetRouteUrl("prev", new { id = item.SP.MaSP }) %>">
                             <img src="<%=item.SP.HinhAnhDaiDien%>" alt="">
                         </a>
                         </td>
-                        <td><a href="<%=Page.GetRouteUrl("prev", new { id = item.SP.TenSP }) %>"><%=item.SP.TenSP %></a></td>
+                        <td><a href="<%=Page.GetRouteUrl("prev", new { id = item.SP.MaSP }) %>"><%=item.SP.TenSP %></a></td>
                         <td class="price"><%=string.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}",item.SP.DonGia) %></td>
                         <td>
                             <div>

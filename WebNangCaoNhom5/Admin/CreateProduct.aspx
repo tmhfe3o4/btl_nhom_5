@@ -7,12 +7,12 @@
             <script>
                 function checkValid() {
                     //if (Page_ClientValidate("Group")) {   
-                        
-                        $('.back').css('display', 'block');
+
+                    $('.back').css('display', 'block');
 
                     return true;
-                //}
-                //return false;
+                    //}
+                    //return false;
                 };
             </script>
         </div>
@@ -22,7 +22,7 @@
         <asp:UpdatePanel runat="server">
             <ContentTemplate>
 
-           
+
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -60,11 +60,11 @@
                                                 <%} %>
                                             </select>
                                             <%--<div name="abc">
-                                        <input type="radio" name="1" value="1" />
-                                        <input type="radio" name="1" value="2" />
-                                        <input type="radio" name="1" value="3" />
-                                        <input type="radio" name="1" value="4" />
-                                    </div>--%>
+                                                <%foreach (var item in getNSX())
+                                                    { %>
+                                                <input type="radio"  name="txtname" value="<%=item.MaNSX %>" /><%=item.TenNSX %>
+                                                <%} %>
+                                            </div>--%>
                                         </div>
                                         <label>Chi tiết</label>
                                         <CKEditor:CKEditorControl ID="CKEditorControl1" runat="server"></CKEditor:CKEditorControl>
@@ -72,7 +72,7 @@
                                         <div class="form-group">
                                             <label>Số lượng</label>
                                             <input type="text" runat="server" class="form-control" id="soluong" placeholder="Số lượng">
-                                           <%-- <asp:RequiredFieldValidator ValidationGroup="Group" runat="server" ForeColor="Red" ControlToValidate="soluong" ErrorMessage="Số lượng trống"></asp:RequiredFieldValidator>
+                                            <%-- <asp:RequiredFieldValidator ValidationGroup="Group" runat="server" ForeColor="Red" ControlToValidate="soluong" ErrorMessage="Số lượng trống"></asp:RequiredFieldValidator>
                                             <asp:RegularExpressionValidator runat="server" ControlToValidate="soluong" ForeColor="red" ValidationExpression="^\d+$" ErrorMessage="Chỉ nhập số"></asp:RegularExpressionValidator>--%>
                                         </div>
                                         <div class="form-group">
@@ -90,7 +90,7 @@
                                             <label>Ảnh liên quan </label>
                                             <br />
                                             <textarea readonly="readonly" style="cursor: pointer" cols="60" rows="10" id="anhlienquan" runat="server"></textarea>
-                                           <%-- <asp:RequiredFieldValidator ValidationGroup="Group" runat="server" ForeColor="Red" ControlToValidate="anhlienquan" ErrorMessage="Vui lòng chọn ảnh"></asp:RequiredFieldValidator>--%>
+                                            <%-- <asp:RequiredFieldValidator ValidationGroup="Group" runat="server" ForeColor="Red" ControlToValidate="anhlienquan" ErrorMessage="Vui lòng chọn ảnh"></asp:RequiredFieldValidator>--%>
                                         </div>
                                         <asp:Button ValidationGroup="Group" CausesValidation="true" OnClick="btnSubmit_Click" OnClientClick="return checkValid();" CssClass="btn btn-primary" runat="server" ID="btnSubmit" Text="Thêm" />
 
@@ -107,7 +107,7 @@
                     <!-- /.col-lg-12 -->
                 </div>
 
-             </ContentTemplate>
+            </ContentTemplate>
         </asp:UpdatePanel>
     </form>
     <script src="../Asset/Admin/js/CreateProDuct.js"></script>

@@ -36,28 +36,28 @@
                     </div>
                     <div class="panel-body">
                         <form role="form" runat="server">
-                             <asp:ScriptManager  runat="server" ID="scriplogin"></asp:ScriptManager>
+                            <asp:ScriptManager runat="server" ID="scriplogin"></asp:ScriptManager>
                             <asp:UpdatePanel runat="server" ID="panelLogin">
                                 <ContentTemplate>
-                            
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" runat="server" placeholder="E-mail" id="email" type="email" autofocus>
 
-                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="email" ErrorMessage="Email trống" />
-                                    <asp:RegularExpressionValidator runat="server" ControlToValidate="email" ValidationExpression="^[a-z][a-z0-9%_\.]{3,32}@[a-z0-9]{3,}(\.[a-z]{3,4}){1,2}$" ErrorMessage="Email không hợp lệ"></asp:RegularExpressionValidator>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" runat="server" placeholder="Password" id="password" type="password" value="">
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="password" ErrorMessage="Mật khẩu trống" />
-                                    </div>
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <input class="form-control" runat="server" placeholder="E-mail" id="email" type="email" autofocus>
+
+                                            <asp:RequiredFieldValidator runat="server" ControlToValidate="email" ErrorMessage="Email trống" />
+                                            <asp:RegularExpressionValidator runat="server" ControlToValidate="email" ValidationExpression="^[a-z][a-z0-9%_\.]{3,32}@[a-z0-9]{3,}(\.[a-z]{3,4}){1,2}$" ErrorMessage="Email không hợp lệ"></asp:RegularExpressionValidator>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" runat="server" placeholder="Password" id="password" type="password" value="">
+                                            <asp:RequiredFieldValidator runat="server" ControlToValidate="password" ErrorMessage="Mật khẩu trống" />
+                                        </div>
 
 
-                                <!-- Change this to a button or input when using this as a form -->
-                                <asp:Button runat="server" OnClick="Unnamed_ServerClick" CssClass="btn btn-lg btn-success btn-block" Text="Đăng nhập" />
-                            </fieldset>
+                                        <!-- Change this to a button or input when using this as a form -->
+                                        <asp:Button runat="server" OnClick="Unnamed_ServerClick" CssClass="btn btn-lg btn-success btn-block" Text="Đăng nhập" />
+                                    </fieldset>
 
-                                                            </ContentTemplate>
+                                </ContentTemplate>
                             </asp:UpdatePanel>
                         </form>
                     </div>

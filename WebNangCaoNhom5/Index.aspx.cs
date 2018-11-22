@@ -80,31 +80,20 @@ namespace WebNangCaoNhom5
             return db.HinhAnhs.Where(n => n.MaSP == MaSP).Take(1).ToList();
         }
         [WebMethod]
-        public static string LoadUserControl(int tensp, int? soluong = null)
+        public static void LoadUserControl(int tensp, int? soluong = null)
         {
             int sl = (soluong ?? 1);
             AddCart(tensp, sl);
 
-            using (Index page = new Index())
-            {
-                HtmlForm form = new HtmlForm();
-                Cart userControl = (Cart)page.LoadControl("~/UserControl/Cart.ascx");
-                form.Controls.Add(userControl);
-                using (StringWriter writer = new StringWriter())
-                {
-                    page.Controls.Add(form);
-                    HttpContext.Current.Server.Execute(page, writer, false);
-                    return writer.ToString();
-                }
-            }
+            
 
 
         }
-        public static bool AddCart(int tensp, int sl)
+        public static void AddCart(int tensp, int sl)
         {
             SanPham sp = db.SanPhams.FirstOrDefault(n => n.MaSP == tensp);
             if (sp == null)
-                return false;
+                return ;
             List<ItemCart> lst;
             if (HttpContext.Current.Session["Cart"] == null)
             {
@@ -144,7 +133,7 @@ namespace WebNangCaoNhom5
                 HttpContext.Current.Session["Cart"] = lst;
             }
 
-            return true;
+            
         }
         protected void login()
         {

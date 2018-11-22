@@ -56,9 +56,6 @@ namespace WebNangCaoNhom5
         }
 
 
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("sds.com");
-        }
+       
     }
 }
