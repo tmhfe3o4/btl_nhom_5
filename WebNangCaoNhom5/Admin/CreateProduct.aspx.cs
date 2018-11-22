@@ -36,28 +36,28 @@ namespace WebNangCaoNhom5.Admin
                                     true);
                 Response.Write(Page.Request.Form["txtname"]);
               SanPham sp = new SanPham();
-            //sp.TenSP = tensp.Value;
-            //sp.TomTat = tomtat.Value;
-            //sp.SoLuongTon = int.Parse(soluong.Value);
-            //sp.ChiTiet = CKEditorControl1.Text;
-            //sp.DonGia = decimal.Parse(dongia.Value);
+            sp.TenSP = tensp.Value;
+            sp.TomTat = tomtat.Value;
+            sp.SoLuongTon = int.Parse(soluong.Value);
+            sp.ChiTiet = CKEditorControl1.Text;
+            sp.DonGia = decimal.Parse(dongia.Value);
 
-            //sp.HinhAnhDaiDien = anhdaidien.Value;
-            //sp.NgayCapNhat = DateTime.Now;
-            //sp.MaNCC = 1;
-            //sp.MaNSX = int.Parse(Page.Request.Form["txt"]);
-            //sp.MaLoaiSP = 1;
-            //db.SanPhams.InsertOnSubmit(sp);
-            //db.SubmitChanges();
-            //string[] x = anhlienquan.InnerText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            //foreach (var item in x)
-            //{
-            //    HinhAnh hinhAnh = new HinhAnh();
-            //    hinhAnh.MaSP = sp.MaSP;
-            //    hinhAnh.TenHinhAnh = item;
-            //    db.HinhAnhs.InsertOnSubmit(hinhAnh);
-            //}
-            //db.SubmitChanges();
+            sp.HinhAnhDaiDien = anhdaidien.Value;
+            sp.NgayCapNhat = DateTime.Now;
+            sp.MaNCC = 1;
+            sp.MaNSX = int.Parse(Page.Request.Form["txt"]);
+            sp.MaLoaiSP = 1;
+            db.SanPhams.InsertOnSubmit(sp);
+            db.SubmitChanges();
+            string[] x = anhlienquan.InnerText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var item in x)
+            {
+                HinhAnh hinhAnh = new HinhAnh();
+                hinhAnh.MaSP = sp.MaSP;
+                hinhAnh.TenHinhAnh = item;
+                db.HinhAnhs.InsertOnSubmit(hinhAnh);
+            }
+            db.SubmitChanges();
             tensp.Value = "";
             tomtat.Value = "";
             CKEditorControl1.Text = "";
