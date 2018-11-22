@@ -1411,6 +1411,7 @@
     <Content Include="UserControl\Cart.ascx" />
     <Content Include="UserControl\Category.ascx" />
     <Content Include="Web.config" />
+    <Content Include="login_register.aspx" />
     <Content Include="WebService.asmx" />
   </ItemGroup>
   <ItemGroup>
@@ -1589,6 +1590,13 @@
     </Compile>
     <Compile Include="UserControl\Category.ascx.designer.cs">
       <DependentUpon>Category.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="login_register.aspx.cs">
+      <DependentUpon>login_register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_register.aspx.designer.cs">
+      <DependentUpon>login_register.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebService.asmx.cs">
       <DependentUpon>WebService.asmx</DependentUpon>

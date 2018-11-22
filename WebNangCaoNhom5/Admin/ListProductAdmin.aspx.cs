@@ -22,8 +22,7 @@ namespace WebNangCaoNhom5.Admin
         [WebMethod]
         public static string ListProduct()
         {
-            SanPham sp = new SanPham();
-            
+            SanPham sp = new SanPham();    
 
           
             return JsonConvert.SerializeObject(db.SanPhams.ToList());

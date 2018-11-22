@@ -36,8 +36,6 @@
                                 <asp:ScriptManager runat="server"></asp:ScriptManager>
                                 <asp:UpdatePanel runat="server">
                                     <ContentTemplate>
-
-
                                         <div class="form-group">
                                             <label>Tên sản phẩm</label>
                                             <input type="text" runat="server" class="form-control" id="tensp" placeholder="Tên sản phẩm">

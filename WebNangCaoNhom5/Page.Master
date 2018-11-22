@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="WebNangCaoNhom5.Page" %>
+
 <%@ Register TagPrefix="UC" TagName="Cart" Src="~/UserControl/Cart.ascx" %>
 <!DOCTYPE html>
 
@@ -13,23 +14,20 @@
     <script src="Scripts/jquery.unobtrusive-ajax.js"></script>
 
 </head>
-
-
-
-
 <body>
 
     <div class="header">
+        <div style="text-align: right; width: 100%;">
+            <a runat="server" href="~/login_register.aspx">Đăng nhập/Đăng ký</a>
+        </div>
         <div class="header_top">
-            <div class="logo">
+            <div class="logo" style="position: relative;">
                 <a href="/Home">
                     <img src="Asset/Client/image/logoWeb.png" alt="">
                 </a>
-
             </div>
             <div id="load" class="cart">
-              <UC:Cart runat="server"  />
-
+                <UC:Cart runat="server" />
             </div>
         </div>
         <div class="header_bottom">
@@ -146,7 +144,6 @@
 
     </div>
     <asp:ContentPlaceHolder runat="server" ID="body">
-
     </asp:ContentPlaceHolder>
 
     <div class="footer">

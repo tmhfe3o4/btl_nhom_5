@@ -146,7 +146,14 @@ namespace WebNangCaoNhom5
 
             return true;
         }
+        protected void login()
+        {
+            
+        }
 
+        protected void signin()
+        {
 
+        }
     }
 }
